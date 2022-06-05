@@ -1,5 +1,9 @@
 import { Avatar, Button, Card, Text } from '@nextui-org/react';
 import { followingStatus as friendStatus } from '../../constants/homeConstants';
+import {
+  CardTitleText,
+  SmallGreyText,
+} from '../../../../components/atoms/appTexts';
 
 export default function PersonItem(props) {
   const { id, mediaUrl, name, position, followingStatus } = props;
@@ -28,12 +32,8 @@ export default function PersonItem(props) {
       }}
     >
       <Avatar rounded src={mediaUrl} />
-      <Text h6 size={14} color="black" style={{ marginTop: '1rem' }}>
-        {name}
-      </Text>
-      <Text h6 size={12} color="grey">
-        {position}
-      </Text>
+      <CardTitleText text={name} styles={{ marginTop: '1rem' }} />
+      <SmallGreyText text={position} />
       <Button
         size="xs"
         color={'white'}

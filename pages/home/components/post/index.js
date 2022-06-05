@@ -271,6 +271,38 @@ const CommentThread = (props) => {
           </Text>
           <Text size={12}>10min</Text>
         </div>
+        <div className={styles.replies}>
+          {replies.map((reply) => (
+            <Comment key={reply.id} {...reply} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Comment = (props) => {
+  const { name, avatar, message, createdAt } = props;
+
+  return (
+    <div className={styles.commentThread}>
+      <Avatar src={avatar} />
+      <div className={styles.commentThreadColumn}>
+        <div className={styles.comment}>
+          <Text small css={{ fontWeight: 'bold' }}>
+            {name}
+          </Text>
+          <Text small>{message}</Text>
+        </div>
+        <div className={styles.commentInteraction}>
+          <Text size={12} css={{ cursor: 'pointer' }}>
+            Like
+          </Text>
+          <Text size={12} css={{ cursor: 'pointer' }}>
+            Reply
+          </Text>
+          <Text size={12}>10min</Text>
+        </div>
       </div>
     </div>
   );
