@@ -4,7 +4,9 @@
 		"paths": {
 			"@/components/*": ["components/*"],
 			"@/dummyData/*": ["dummyData/*"],
-			"@/shared/*": ["shared/*"]
+			"@/shared/*": ["shared/*"],
+			"@/constants/*": ["constants/*"],
+			"@/hooks/*": ["hooks/*"]
 		}
   }
 }

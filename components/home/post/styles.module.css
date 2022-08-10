@@ -65,15 +65,15 @@
 }
 
 /* comment area */
-
 .commentInput {
   display: flex;
+	align-items: center;
   gap: 1rem;
 }
 
 .commentInputBox {
   max-width: 10rem;
-  min-width: 25rem;
+  min-width: 24rem;
 }
 
 .commentThreads {

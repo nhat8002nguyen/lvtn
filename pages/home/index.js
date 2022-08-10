@@ -1,20 +1,18 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from './styles.module.css';
-import { LeftSide, RightSide } from '../../components';
-import HomeNavigation from './components/homeNavigation';
+import { LeftSide, RightSide } from '@/components/index';
+import HomeNavigation from '@/components/home/homeNavigation';
 import { useState } from 'react';
 import { ArrowForwardRounded } from '@material-ui/icons';
-import UserStatusInput from './components/userStatusInput';
-import PersonCard from './components/personCard';
-import { posts } from '../../dummyData/posts.json';
-import Post from './components/post';
-import { recommendedFriends } from '../../dummyData/recommendedFriends.json';
-import appPages from '../../shared/appPages';
+import UserStatusInput from '@/components/home/userStatusInput';
+import PersonCard from '@/components/home/personCard';
+import { posts } from '@/dummyData/posts.json';
+import Post from '@/components/home/post';
+import { recommendedFriends } from '@/dummyData/recommendedFriends.json';
+import appPages from '@/shared/appPages';
 
 export default function Home() {
-  const [activeTab, changeActiveTab] = useState('feed');
-
   return (
     <div className={styles.container}>
       <Head>
@@ -25,10 +23,7 @@ export default function Home() {
       <main className={styles.main}>
         <LeftSide currentPage={appPages.home} />
         <div className={styles.contentContainer}>
-          <HomeNavigation
-            activeTab={activeTab}
-            changeActiveTab={changeActiveTab}
-          />
+          <HomeNavigation />
           <UserStatusInput />
           <div className={styles.recommendedPeople}>
             <div className={styles.cardListHeader}>

@@ -1,9 +1,6 @@
 import { Avatar, Button, Card, Text } from '@nextui-org/react';
-import { followingStatus as friendStatus } from '../../constants/homeConstants';
-import {
-  CardTitleText,
-  SmallGreyText,
-} from '../../../../components/atoms/appTexts';
+import { followingStatus as friendStatus } from '@/constants/homeConstants.js';
+import { CardTitleText, SmallGreyText } from '@/components/atoms/appTexts';
 
 export default function PersonItem(props) {
   const { id, mediaUrl, name, position, followingStatus } = props;

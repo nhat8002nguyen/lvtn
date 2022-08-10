@@ -6,13 +6,14 @@ import {
   ScreenShareOutlined,
   ShareOutlined,
   ThumbUp,
+  Send,
 } from '@material-ui/icons';
 import { Avatar, Card, Input, Text } from '@nextui-org/react';
 import Image from 'next/image';
 import React from 'react';
-import { imageUrlAlt } from '../../constants/homeConstants';
+import { imageUrlAlt } from '@/constants/homeConstants';
 import styles from './styles.module.css';
-import { appColors } from '../../../../shared/theme';
+import { appColors } from '@/shared/theme';
 
 export default function Post(props) {
   const {
@@ -238,6 +239,7 @@ const CommentArea = ({ threadChats, avatar }) => {
           className={styles.commentInputBox}
           placeholder="Write Your comment"
         />
+        <Send cursor="pointer" htmlColor={appColors.primary} />
       </div>
       <div className={styles.commentThreads}>
         {threadChats.map((thread) => (
